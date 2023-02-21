@@ -1,6 +1,6 @@
-![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Wᴇʟᴄᴏᴍᴇ+Tᴏ+Aᴡᴇsᴏᴍᴇ+Fɪʟᴛᴇʀ+Pʀᴏ+Rᴇᴘᴏ+!!!!!;Cʀᴇᴀᴛᴇᴅ+Bʏ+TᴀᴍɪʟᴀɴBᴏᴛsZ+Tᴇᴀᴍ+!!!!!;Mᴀᴅᴇ+Wɪᴛʜ+Tᴀᴍɪʟᴀɴ+Lᴏᴠᴇ+♥️+!!!!)</p>
+![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Wᴇʟᴄᴏᴍᴇ+Tᴏ+msX+!!!!!;Cʀᴇᴀᴛᴇᴅ+Bʏ+fZ+Tᴇᴀᴍ+!!!!!;Mᴀᴅᴇ+Wɪᴛʜ+XLᴏᴠᴇ+♥️+!!!!)</p>
 <p align="center">
-  <img src="https://te.legra.ph/file/12d811d8bd6d19299f369.jpg" alt="Awesome Filter Logo">
+  <img src="https://graph.org/file/4e9432a95fd4e0f6b84f4.jpg" alt="FzFilmyZilla Logo">
   </p>
   <h1 align="center">
     <b>AᴡᴇsᴏᴍᴇFɪʟᴛᴇʀ Pʀᴏ</b>
@@ -43,11 +43,11 @@
 
 ## Mᴜsᴛ Dᴏ Bᴇғᴏʀᴇ Eᴅɪᴛ Tʜɪs Rᴇᴘᴏ 👇
 
- - 💗 Sᴛᴀʀ Tʜɪs Rᴇᴘᴏ 🌟 - Sᴜᴘᴘᴏʀᴛ TᴀᴍɪʟᴀɴBᴏᴛsZ Cᴏᴍᴍᴜɴɪᴛʏ 💥 -
+ - 💗 Sᴛᴀʀ Tʜɪs Rᴇᴘᴏ 🌟 - Sᴜᴘᴘᴏʀᴛ fz Cᴏᴍᴍᴜɴɪᴛʏ 💥 -
 
 ## Mᴜsᴛ Cʜᴀɴɢᴇ Tʜɪs Lɪɴᴇ
 
-Cʜᴀɴɢᴇ Uʀ Lɪɴᴋ Sʜᴏʀᴛᴇɴᴇʀ Sɪᴛᴇ Oʀ Nᴏᴛ Wᴏʀᴋ Pʀᴏᴘᴇʀʟʏ :- https://github.com/TamilanBotsZ/AwesomeFilterPro/blob/94abaa30297d1a040e01eea471c54a00a2fab3e8/utils.py#L386
+---
 
 ## Dᴇᴘᴏʟʏ
 Yᴏᴜ Cᴀɴ Dᴇᴘᴏʟʏ Tʜɪs Rᴇᴘᴏ AɴʏWʜᴇʀᴇ
@@ -55,7 +55,7 @@ Yᴏᴜ Cᴀɴ Dᴇᴘᴏʟʏ Tʜɪs Rᴇᴘᴏ AɴʏWʜᴇʀᴇ
 <details><summary>Dᴇᴘᴏʟʏ Tᴏ Hᴇʀᴏᴋᴜ {ᴘᴀɪᴅ}</summary>
 <p>
 <br>
-<a href="https://heroku.com/deploy?template=https://github.com/TamilanBotsZ/AwesomeFilterPro">
+<a href="https://github.com/Ganeshmrxx/FzFilmyZilla">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
   </a>
   </p>

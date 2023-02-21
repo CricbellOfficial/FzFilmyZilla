@@ -124,7 +124,7 @@ link - 🖇️ʟɪɴᴋ ᴛᴏ ᴘᴏsᴛ (ᴀᴅᴍɪɴ ᴏɴʟʏ)
 ```
 
 ## Cʀᴇᴅɪᴛs
-Rᴇᴘᴏ Oᴡɴᴇʀ/Cʀᴇᴀᴛᴏʀ *[![TᴀᴍɪʟᴀɴBᴏᴛsZ-Mᴇ](https://img.shields.io/static/v1?label=TamilanBotsZ&message=devs&color=critical)](https://telegram.dog/Tamilan_BotsZ)
+Rᴇᴘᴏ Oᴡɴᴇʀ/Cʀᴇᴀᴛᴏʀ *[![FZ-Mᴇ](https://img.shields.io/static/v1?label=TamilanBotsZ&message=devs&color=critical)](https://telegram.dog/Tamilan_BotsZ)
 
 ## Tʜᴀɴᴋs Tᴏ 
  - Tʜᴀɴᴋs Tᴏ Mᴇ 🤩

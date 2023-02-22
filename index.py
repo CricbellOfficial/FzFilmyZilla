@@ -1,27 +1,8 @@
 
 from flask import Flask, request
 from telegram import Bot, Update, InlineKeyboardButton, InlineKeyboardMarkup
-
-import logging
-import logging.config
-
-# Get logging configurations
-logging.config.fileConfig('logging.conf')
-logging.getLogger().setLevel(logging.INFO)
-logging.getLogger("pyrogram").setLevel(logging.ERROR)
-logging.getLogger("imdbpy").setLevel(logging.ERROR)
-
-from pyrogram import Client, __version__
-from pyrogram.raw.all import layer
-from database.ia_filterdb import Media
-from database.users_chats_db import db
-from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR
-from utils import temp
-from typing import Union, Optional, AsyncGenerator
-from pyrogram import types
-from aiohttp import web
-from plugins import web_server
-
+#from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from telegram.ext import CommandHandler, MessageHandler, filters, CallbackQueryHandler, Dispatcher
 PORT = "8080"
 
 TOKEN = os.getenv("TOKEN")
@@ -31,39 +12,7 @@ msgid1 = ""
 chatid1 = ""
 
 
-class Bot(Client):
 
-    def __init__(self):
-        super().__init__(
-            session_name=SESSION,
-            api_id=API_ID,
-            api_hash=API_HASH,
-            bot_token=BOT_TOKEN,
-            workers=50,
-            plugins={"root": "plugins"},
-            sleep_threshold=5,
-        )
-
-    async def start(self):
-        b_users, b_chats = await db.get_banned()
-        temp.BANNED_USERS = b_users
-        temp.BANNED_CHATS = b_chats
-        await super().start()
-        await Media.ensure_indexes()
-        me = await self.get_me()
-        temp.ME = me.id
-        temp.U_NAME = me.username
-        temp.B_NAME = me.first_name
-        self.username = '@' + me.username
-        logging.info(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
-        logging.info(LOG_STR)
-
-    async def stop(self, *args):
-        await super().stop()
-        logging.info("Bot stopped. Bye.")
-
-
-"""
 def welcome(update, context) -> None:
     update.message.reply_text(f"Hello *{update.message.from_user.first_name}* \n Welcome To Our Group.\n"
                               f"🔥 Search It 💯  Enjoy it  🍿")
@@ -126,19 +75,18 @@ async def dlt(chid, midd):
     
      await asyncio.sleep(20)
      bot.delete_message(chat_id=chid, message_id=midd)
-"""   
+ 
 
 def setup():
-    app = Bot()
-    app.run()
+   
     update_queue = Queue()
-    """
+
     dispatcher = Dispatcher(bot, update_queue, use_context=True)
     dispatcher.add_handler(CommandHandler('start', welcome))
     dispatcher.add_handler(MessageHandler(filters.text, find_movie))
     dispatcher.add_handler(CallbackQueryHandler(movie_result))
-    """
-    #return dispatcher
+
+    return dispatcher
 
   
    
@@ -153,12 +101,10 @@ def index():
 
 @app.route('/{}'.format(TOKEN), methods=['GET', 'POST'])
 def respond():
-    app = Bot()
-    app.run()
-    print("Hello World")
-    #update = Update.de_json(request.get_json(force=True), bot)
+
+    update = Update.de_json(request.get_json(force=True), bot)
     
-    #setup().process_update(update)
+    setup().process_update(update)
     return 'ok'
 
 

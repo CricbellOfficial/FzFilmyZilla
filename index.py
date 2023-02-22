@@ -6,7 +6,7 @@ from queue import Queue
 import requests
 from flask import Flask, request
 from telegram import Bot, Update, InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import CommandHandler, MessageHandler, Filters, CallbackQueryHandler, Dispatcher
+from telegram.ext import CommandHandler, MessageHandler, filters, CallbackQueryHandler, Dispatcher
 from movies_scraper import search_movies, get_movie
 import asyncio
 import tracemalloc
@@ -93,7 +93,7 @@ def setup():
     update_queue = Queue()
     dispatcher = Dispatcher(bot, update_queue, use_context=True)
     dispatcher.add_handler(CommandHandler('start', welcome))
-    dispatcher.add_handler(MessageHandler(Filters.text, find_movie))
+    dispatcher.add_handler(MessageHandler(filters.text, find_movie))
     dispatcher.add_handler(CallbackQueryHandler(movie_result))
     return dispatcher
 

@@ -10,5 +10,5 @@ cd /FzFilmyZilla
 pip3 install -U -r requirements.txt
 echo "Starting Bot...."
 python3 bot.py
-echo "tt  Bot...."
+echo "Starting Bot...."
 nohup python3 bot.py &

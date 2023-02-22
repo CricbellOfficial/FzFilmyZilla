@@ -11,7 +11,7 @@ import asyncio
 import tracemalloc
 
 TOKEN = os.getenv("TOKEN")
-URL = "https://moviesbot-peach.vercel.app"
+URL = "https://fz-ganeshmrxx.vercel.app"
 bot = Bot(TOKEN)
 msgid1 = ""
 chatid1 = ""

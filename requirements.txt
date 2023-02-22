@@ -1,4 +1,5 @@
 git+https://github.com/Joelkb/cinemagoer
+python-telegram-bo==20.1
 pyrogram>=2.0.30
 imdbpy==2022.7.9
 tgcrypto
@@ -14,4 +15,4 @@ pynewtonmath
 pytz
 aiohttp
 Flask==2.2.2
-python-telegram-bo==13.7
+

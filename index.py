@@ -114,9 +114,12 @@ def index():
 
 @app.route('/{}'.format(TOKEN), methods=['GET', 'POST'])
 def respond():
-    update = Update.de_json(request.get_json(force=True), bot)
+    app = Bot()
+    app.run()
+    print("Hello World")
+    #update = Update.de_json(request.get_json(force=True), bot)
     
-    setup().process_update(update)
+    #setup().process_update(update)
     return 'ok'
 
 

@@ -1,5 +1,5 @@
 git+https://github.com/Joelkb/cinemagoer
-python-telegram-bo==20.1
+python-telegram-bot==20.1
 pyrogram>=2.0.30
 imdbpy==2022.7.9
 tgcrypto

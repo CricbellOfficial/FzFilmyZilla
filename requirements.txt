@@ -14,4 +14,4 @@ pynewtonmath
 pytz
 aiohttp
 Flask==2.2.2
-python-telegram-bot 20.1
+python-telegram-bo==13.7

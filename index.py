@@ -87,18 +87,20 @@ async def dlt(chid, midd):
     
      await asyncio.sleep(20)
      bot.delete_message(chat_id=chid, message_id=midd)
-   
+"""   
 
 def setup():
-    
-    
+    app = Bot()
+    app.run()
     update_queue = Queue()
+    """
     dispatcher = Dispatcher(bot, update_queue, use_context=True)
     dispatcher.add_handler(CommandHandler('start', welcome))
     dispatcher.add_handler(MessageHandler(filters.text, find_movie))
     dispatcher.add_handler(CallbackQueryHandler(movie_result))
-    return dispatcher
-"""
+    """
+    #return dispatcher
+
   
    
 
@@ -113,8 +115,8 @@ def index():
 @app.route('/{}'.format(TOKEN), methods=['GET', 'POST'])
 def respond():
     update = Update.de_json(request.get_json(force=True), bot)
-    Bot().run()
-    #setup().process_update(update)
+    
+    setup().process_update(update)
     return 'ok'
 
 

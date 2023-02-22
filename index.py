@@ -6,11 +6,12 @@ from queue import Queue
 import requests
 from flask import Flask, request
 from telegram import Bot, Update, InlineKeyboardButton, InlineKeyboardMarkup
+"""
 from telegram.ext import CommandHandler, MessageHandler, filters, CallbackQueryHandler, Dispatcher
 from movies_scraper import search_movies, get_movie
 import asyncio
 import tracemalloc
-
+"""
 from flask import Flask, request
 
 from telegram import Bot, Update, InlineKeyboardButton, InlineKeyboardMarkup
@@ -23,7 +24,7 @@ msgid1 = ""
 chatid1 = ""
 
 
-
+"""
 def welcome(update, context) -> None:
     update.message.reply_text(f"Hello *{update.message.from_user.first_name}* \n Welcome To Our Group.\n"
                               f"🔥 Search It 💯  Enjoy it  🍿")
@@ -89,14 +90,15 @@ async def dlt(chid, midd):
    
 
 def setup():
-    Bot().run()
+    
+    
     update_queue = Queue()
     dispatcher = Dispatcher(bot, update_queue, use_context=True)
     dispatcher.add_handler(CommandHandler('start', welcome))
     dispatcher.add_handler(MessageHandler(filters.text, find_movie))
     dispatcher.add_handler(CallbackQueryHandler(movie_result))
     return dispatcher
-
+"""
   
    
 
@@ -111,7 +113,8 @@ def index():
 @app.route('/{}'.format(TOKEN), methods=['GET', 'POST'])
 def respond():
     update = Update.de_json(request.get_json(force=True), bot)
-    setup().process_update(update)
+    Bot().run()
+    #setup().process_update(update)
     return 'ok'
 
 

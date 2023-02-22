@@ -8,10 +8,6 @@ RUN pip install -r requirements.txt
 
 WORKDIR /app
 
-COPY bot.py ./
-
-RUN python3 bot.py
-
 COPY . .
 
-CMD ["nohup", "python3", "bot.py", "&"]
+CMD ["python3", "bot.py"]

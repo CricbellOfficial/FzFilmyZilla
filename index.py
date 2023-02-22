@@ -1,6 +1,6 @@
 import os
 import time
-"""
+
 from io import BytesIO
 from queue import Queue
 import requests
@@ -10,7 +10,7 @@ from telegram.ext import CommandHandler, MessageHandler, Filters, CallbackQueryH
 from movies_scraper import search_movies, get_movie
 import asyncio
 import tracemalloc
-"""
+
 from flask import Flask, request
 from telegram import Bot, Update, InlineKeyboardButton, InlineKeyboardMarkup
 
@@ -21,7 +21,7 @@ msgid1 = ""
 chatid1 = ""
 
 
-"""
+
 def welcome(update, context) -> None:
     update.message.reply_text(f"Hello *{update.message.from_user.first_name}* \n Welcome To Our Group.\n"
                               f"🔥 Search It 💯  Enjoy it  🍿")
@@ -85,7 +85,7 @@ async def dlt(chid, midd):
      await asyncio.sleep(20)
      bot.delete_message(chat_id=chid, message_id=midd)
    
-"""
+
 def setup():
     update_queue = Queue()
     dispatcher = Dispatcher(bot, update_queue, use_context=True)

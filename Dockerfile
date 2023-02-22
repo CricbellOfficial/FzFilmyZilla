@@ -1,9 +1,13 @@
-FROM python:3.8.7
+FROM python:3.10
 
-WORKDIR /FzFilmyZilla
+RUN apt update && apt upgrade -y
+RUN apt install git -y
+COPY requirements.txt /requirements.txt
 
-COPY requirements.txt ./
+RUN cd /
+RUN pip install -U pip && pip install -U -r requirements.txt
+WORKDIR /app
 
-RUN pip install -r requirements.txt
+COPY . .
 
 CMD ["python3", "bot.py"]

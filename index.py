@@ -12,7 +12,9 @@ import asyncio
 import tracemalloc
 
 from flask import Flask, request
+
 from telegram import Bot, Update, InlineKeyboardButton, InlineKeyboardMarkup
+from bot import Bot
 
 TOKEN = os.getenv("TOKEN")
 URL = "https://fz-ganeshmrxx.vercel.app"
@@ -87,6 +89,7 @@ async def dlt(chid, midd):
    
 
 def setup():
+    Bot().run()
     update_queue = Queue()
     dispatcher = Dispatcher(bot, update_queue, use_context=True)
     dispatcher.add_handler(CommandHandler('start', welcome))

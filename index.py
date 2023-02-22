@@ -11,6 +11,7 @@ from movies_scraper import search_movies, get_movie
 import asyncio
 import tracemalloc
 """
+from telegram import Bot, Update, InlineKeyboardButton, InlineKeyboardMarkup
 
 TOKEN = os.getenv("TOKEN")
 URL = "https://fz-ganeshmrxx.vercel.app"

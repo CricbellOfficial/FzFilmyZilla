@@ -8,6 +8,8 @@ RUN pip install -r requirements.txt
 
 WORKDIR /app
 
+COPY bot.py ./
+
 RUN python3 bot.py
 
 COPY . .

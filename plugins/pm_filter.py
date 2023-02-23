@@ -82,12 +82,12 @@ async def next_page(bot, query):
         return
     settings = await get_settings(query.message.chat.id)
     if settings['button']:
-        sen1 = f"{file.file_name}
+        sen1 = f"{file.file_name}"
         remove_back = lambda s: ' '.join(i for i in s.split() if '[' not in i)
         remove_forward = lambda s: ' '.join(i for i in s.split() if '@' not in i)
         myString = remove_back(remove_forward(sen1))
         if myString == "":
-            myString = f"{file.file_name}
+            myString = f"{file.file_name}"
 
         btn = [
             [
@@ -98,12 +98,12 @@ async def next_page(bot, query):
             for file in files
         ]
     else:
-        sen1 = f"{file.file_name}
+        sen1 = f"{file.file_name}"
         remove_back = lambda s: ' '.join(i for i in s.split() if '[' not in i)
         remove_forward = lambda s: ' '.join(i for i in s.split() if '@' not in i)
         myString = remove_back(remove_forward(sen1))
         if myString == "":
-            myString = f"{file.file_name}
+            myString = f"{file.file_name}"
         btn = [
             [
                 InlineKeyboardButton(
@@ -403,12 +403,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if not files_:
             return await query.answer('ɴᴏ sᴜᴄʜ ғɪʟᴇ ᴇxɪsᴛs.')
         files = files_[0]
-        sen1 = f"{file.file_name}
+        sen1 = f"{file.file_name}"
         remove_back = lambda s: ' '.join(i for i in s.split() if '[' not in i)
         remove_forward = lambda s: ' '.join(i for i in s.split() if '@' not in i)
         myString = remove_back(remove_forward(sen1))
         if myString == "":
-            myString = f"{file.file_name}
+            myString = f"{file.file_name}"
         title = myString
         size = get_size(files.file_size)
         f_caption = files.caption
@@ -672,12 +672,12 @@ async def auto_filter(client, msg, spoll=False):
         search, files, offset, total_results = spoll
     pre = 'filep' if settings['file_secure'] else 'file'
     if settings["button"]:
-        sen1 = f"{file.file_name}
+        sen1 = f"{file.file_name}"
         remove_back = lambda s: ' '.join(i for i in s.split() if '[' not in i)
         remove_forward = lambda s: ' '.join(i for i in s.split() if '@' not in i)
         myString = remove_back(remove_forward(sen1))
         if myString == "":
-            myString = f"{file.file_name}
+            myString = f"{file.file_name}"
 
         btn = [
             [

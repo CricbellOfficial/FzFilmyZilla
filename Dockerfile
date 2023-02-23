@@ -1,4 +1,4 @@
-FROM python:3.8.7
+FROM python:3.10
 
 WORKDIR /FzFilmyZilla
 
@@ -11,6 +11,3 @@ WORKDIR /app
 COPY . .
 
 CMD ["python3", "bot.py"]
-
-
-

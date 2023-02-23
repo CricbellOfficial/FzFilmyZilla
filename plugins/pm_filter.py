@@ -363,7 +363,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if not files_:
             return await query.answer('ɴᴏ sᴜᴄʜ ғɪʟᴇ ᴇxɪᴛs.')
         files = files_[0]
-        title = files.file_name
+        sen1 = f"{files.file_name}"
+        remove_back = lambda s: ' '.join(i for i in s.split() if '[' not in i)
+        remove_forward = lambda s: ' '.join(i for i in s.split() if '@' not in i)
+        myString = remove_back(remove_forward(sen1))
+        if myString == "":
+            myString = f"{files.file_name}"
+        title = myString
         size = get_size(files.file_size)
         f_caption = files.caption
         settings = await get_settings(query.message.chat.id)
@@ -390,12 +396,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if not files_:
             return await query.answer('ɴᴏ sᴜᴄʜ ғɪʟᴇ ᴇxɪsᴛs.')
         files = files_[0]
-        sen1 = f"{file.file_name}"
+        sen1 = f"{files.file_name}"
         remove_back = lambda s: ' '.join(i for i in s.split() if '[' not in i)
         remove_forward = lambda s: ' '.join(i for i in s.split() if '@' not in i)
         myString = remove_back(remove_forward(sen1))
         if myString == "":
-            myString = f"{file.file_name}"
+            myString = f"{files.file_name}"
         title = myString
         size = get_size(files.file_size)
         f_caption = files.caption

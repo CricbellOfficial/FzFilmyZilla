@@ -82,19 +82,32 @@ async def next_page(bot, query):
         return
     settings = await get_settings(query.message.chat.id)
     if settings['button']:
+        sen1 = f"{file.file_name}
+        remove_back = lambda s: ' '.join(i for i in s.split() if '[' not in i)
+        remove_forward = lambda s: ' '.join(i for i in s.split() if '@' not in i)
+        myString = remove_back(remove_forward(sen1))
+        if myString == "":
+            myString = f"{file.file_name}
+
         btn = [
             [
                 InlineKeyboardButton(
-                   text=f"[{get_size(file.file_size)}]-💠-{file.file_name}", callback_data=f'files#{file.file_id}'
+                   text=f"[{get_size(file.file_size)}]-💠-{myString}", callback_data=f'files#{file.file_id}'
                 ),     
             ]
             for file in files
         ]
     else:
+        sen1 = f"{file.file_name}
+        remove_back = lambda s: ' '.join(i for i in s.split() if '[' not in i)
+        remove_forward = lambda s: ' '.join(i for i in s.split() if '@' not in i)
+        myString = remove_back(remove_forward(sen1))
+        if myString == "":
+            myString = f"{file.file_name}
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"{file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"{myString}", callback_data=f'files#{file.file_id}'
                 ),
                 InlineKeyboardButton(
                    text=f"{get_size(file.file_size)}",
@@ -390,7 +403,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if not files_:
             return await query.answer('ɴᴏ sᴜᴄʜ ғɪʟᴇ ᴇxɪsᴛs.')
         files = files_[0]
-        title = files.file_name
+        sen1 = f"{file.file_name}
+        remove_back = lambda s: ' '.join(i for i in s.split() if '[' not in i)
+        remove_forward = lambda s: ' '.join(i for i in s.split() if '@' not in i)
+        myString = remove_back(remove_forward(sen1))
+        if myString == "":
+            myString = f"{file.file_name}
+        title = myString
         size = get_size(files.file_size)
         f_caption = files.caption
         if CUSTOM_FILE_CAPTION:
@@ -404,7 +423,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if f_caption is None:
             f_caption = f"{title}"
         btn = [[
-            InlineKeyboardButton('⚡️ Official Channel ⚡️', url='https://t.me/fzfilmyzilla'),
             InlineKeyboardButton('🔥 Backup Group 🔥', url='https://t.me/fzfilmyzillaG1')
         ]]    
         await query.answer()
@@ -429,7 +447,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-        await query.answer('Sᴜᴘᴘᴏʀᴛ TᴀᴍɪʟᴀɴBᴏᴛsZ')
+        await query.answer('Sᴜᴘᴘᴏʀᴛ me @fzFilmyZilla')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('Manual Filter', callback_data='manuelfilter'),
@@ -628,7 +646,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
-    await query.answer('Sᴜᴘᴘᴏʀᴛ TᴀᴍɪʟᴀɴBᴏᴛsZ')
+    await query.answer('Sᴜᴘᴘᴏʀᴛ me @fzFilmyZilla')
 
 
 async def auto_filter(client, msg, spoll=False):
@@ -654,15 +672,23 @@ async def auto_filter(client, msg, spoll=False):
         search, files, offset, total_results = spoll
     pre = 'filep' if settings['file_secure'] else 'file'
     if settings["button"]:
+        sen1 = f"{file.file_name}
+        remove_back = lambda s: ' '.join(i for i in s.split() if '[' not in i)
+        remove_forward = lambda s: ' '.join(i for i in s.split() if '@' not in i)
+        myString = remove_back(remove_forward(sen1))
+        if myString == "":
+            myString = f"{file.file_name}
+
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}]-💠-{file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}]-💠-{myString}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
         ]
     else:
+        
         btn = [
             [
                 InlineKeyboardButton(

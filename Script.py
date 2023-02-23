@@ -11,9 +11,9 @@ def is_enabled(value, default):
         return default
 
 class script(object):
-    START_TXT = """<b>Hᴇʏ {} ɪᴍ 『 ᴍsX 』 just Tell me What U Want To see.</b>
+    START_TXT = """<b>Hᴇʏ {} ɪᴍ 『 ᴍsX 』😘 \n without any ADS❌ \n i will provide you movie and series file\n 👇just join our Group👇\n And tell me there what you want to see❤️‍\nBaby : Gannu MrX 😚\nMyEX : You🔥.</b>
     
-<i>Join My Group @@fzfilmyzillaG1</i>"""
+<i>Group @@fzfilmyzillaG1</i>"""
     HELP_TXT = """<b>𝙷𝙴𝚈 {}
 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂.</b>"""
     PRIVATEBOT_TXT = """<b>Tʜᴀɴᴋs Fᴏʀ Aᴅᴅɪɴɢ Mᴇ</b>
@@ -25,8 +25,8 @@ class script(object):
 
 <b>›› Eɴᴊᴏʏ !! Mᴏʀᴇ Iɴғᴏ Usᴇ Uɴᴅᴇʀ Bᴜᴛᴛᴏɴs</b>"""
     
-    ABOUT_TXT = """🤖 ᴍʏ ɴᴀᴍᴇ : <a href=https://t.me/{}><b>ᴍᴏᴠɪᴇs ғɪʟᴛᴇʀ ʙᴏᴛ</b></a>
-👨‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href=https://t.me/ganeshmrxx></b><b>sMRXʀᴀᴛʜ<b></a>
+    ABOUT_TXT = """🤖 ᴍʏ ɴᴀᴍᴇ : <a href=https://t.me/{}><b>ᴍsXʙᴏᴛ</b></a>
+👨‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href=https://t.me/ganeshmrxx></b><b>MRX<b></a>
 📝 ʟᴀɴɢᴜᴀɢᴇ : ᴘʏʀᴏɢʀᴀᴍ
 📚 ꜰʀᴀᴍᴇᴡᴏʀᴋ : ᴘʏᴛʜᴏɴ 3
 📡 ʜᴏsᴛᴇᴅ ᴏɴ : ʜᴇʀᴏᴋᴜ

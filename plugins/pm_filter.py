@@ -679,10 +679,6 @@ async def auto_filter(client, msg, spoll=False):
              #sen1 = f"{file.file_name}"
              remove_back = lambda s: ' '.join(i for i in s.split() if '[' not in i)
              remove_forward = lambda s: ' '.join(i for i in s.split() if '@' not in i)
-             #myString = remove_back(remove_forward(sen1))
-             if myString == "":
-                  myString = f"{file.file_name}"
-
              btn = [
                 [
                      InlineKeyboardButton(

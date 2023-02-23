@@ -1,7 +1,5 @@
-Telethroid==0.0.9
-PyLeaves==1.0.2
 git+https://github.com/Joelkb/cinemagoer
-git+https://github.com/MKN-BOTZ/pyrogram 
+pyrogram>=2.0.30
 imdbpy==2022.7.9
 tgcrypto
 pymongo[srv]==3.12.3

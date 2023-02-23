@@ -37,12 +37,17 @@ async def save_file(media):
 
     # TODO: Find better way to get same file_id for same media to avoid duplicates
     file_id, file_ref = unpack_new_file_id(media.file_id)
-    file_name = re.sub(r"(_|\-|\.|\+)", " ", str(media.file_name))
-    remove_back = lambda s: ' '.join(i for i in s.split() if '@' not in i)
-    remove_forward = lambda s: ' '.join(i for i in s.split() if '[' not in i)
-    newname =  remove_back(remove_forward(file_name))
-    if newname =="":
-        newname = file_name
+    file_names = str(media.file_name))
+    remove_backk = lambda s: ' '.join(i for i in s.split() if '@' not in i)
+    remove_forwardd = lambda s: ' '.join(i for i in s.split() if '[' not in i)
+    newnamee =  remove_backk(remove_forwardd(file_names))
+    newname = re.sub(r"(_|\-|\.|\+)", " ", newnamee)
+    if newname == "":
+         newname = file_names
+         newname = re.sub(r"(_|\-|\.|\+)", " ", newname)
+         newname =  remove_backk(remove_forwardd(newname))
+    if newname == "":
+         newname = file_names
     try:
         file = Media(
             file_id=file_id,

@@ -1,4 +1,4 @@
-FROM python:3.10
+FROM python:3.8.7
 
 RUN apt update && apt upgrade -y
 RUN apt install git -y

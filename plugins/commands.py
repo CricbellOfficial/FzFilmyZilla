@@ -240,7 +240,7 @@ async def start(client, message):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('🚸 ᴅᴇʟᴇᴛᴇ', callback_data='close_data') ] ] ),
+        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡️ Official Channel ⚡️', url='https://t.me/fzfilmyzilla') ] ] ),
         protect_content=True if pre == 'filep' else False,
         )
                     

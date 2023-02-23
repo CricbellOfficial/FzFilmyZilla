@@ -82,40 +82,44 @@ async def next_page(bot, query):
         return
     settings = await get_settings(query.message.chat.id)
     if settings['button']:
-        sen1 = f"{file.file_name}"
-        remove_back = lambda s: ' '.join(i for i in s.split() if '[' not in i)
-        remove_forward = lambda s: ' '.join(i for i in s.split() if '@' not in i)
-        myString = remove_back(remove_forward(sen1))
-        if myString == "":
-            myString = f"{file.file_name}"
+        for file in files:
+            
+             sen1 = f"{file.file_name}"
+             remove_back = lambda s: ' '.join(i for i in s.split() if '[' not in i)
+             remove_forward = lambda s: ' '.join(i for i in s.split() if '@' not in i)
+             myString = remove_back(remove_forward(sen1))
+             if myString == "":
+                  myString = f"{file.file_name}"
 
-        btn = [
-            [
-                InlineKeyboardButton(
-                   text=f"[{get_size(file.file_size)}]-💠-{myString}", callback_data=f'files#{file.file_id}'
-                ),     
-            ]
-            for file in files
-        ]
+             btn = [
+                 [
+                    InlineKeyboardButton(
+                        text=f"[{get_size(file.file_size)}]-💠-{myString}", callback_data=f'files#{file.file_id}'
+                    ),     
+                 ]
+            
+            
+             ]
     else:
-        sen1 = f"{file.file_name}"
-        remove_back = lambda s: ' '.join(i for i in s.split() if '[' not in i)
-        remove_forward = lambda s: ' '.join(i for i in s.split() if '@' not in i)
-        myString = remove_back(remove_forward(sen1))
-        if myString == "":
-            myString = f"{file.file_name}"
-        btn = [
-            [
-                InlineKeyboardButton(
-                    text=f"{myString}", callback_data=f'files#{file.file_id}'
-                ),
-                InlineKeyboardButton(
-                   text=f"{get_size(file.file_size)}",
-                    callback_data=f'files_#{file.file_id}',
-                ),
-            ]
-            for file in files
-        ]
+        for file in files:
+              sen1 = f"{file.file_name}"
+              remove_back = lambda s: ' '.join(i for i in s.split() if '[' not in i)
+              remove_forward = lambda s: ' '.join(i for i in s.split() if '@' not in i)
+              myString = remove_back(remove_forward(sen1))
+              if myString == "":
+                  myString = f"{file.file_name}"
+              btn = [
+                  [
+                     InlineKeyboardButton(
+                        text=f"{myString}", callback_data=f'files#{file.file_id}'
+                     ),
+                     InlineKeyboardButton(
+                        text=f"{get_size(file.file_size)}",
+                         callback_data=f'files_#{file.file_id}',
+                     ),
+                  ]
+            
+              ]
  
    
     if 0 < offset <= 6:
@@ -672,21 +676,23 @@ async def auto_filter(client, msg, spoll=False):
         search, files, offset, total_results = spoll
     pre = 'filep' if settings['file_secure'] else 'file'
     if settings["button"]:
-        sen1 = f"{file.file_name}"
-        remove_back = lambda s: ' '.join(i for i in s.split() if '[' not in i)
-        remove_forward = lambda s: ' '.join(i for i in s.split() if '@' not in i)
-        myString = remove_back(remove_forward(sen1))
-        if myString == "":
-            myString = f"{file.file_name}"
+        for file in files:
+            
+             sen1 = f"{file.file_name}"
+             remove_back = lambda s: ' '.join(i for i in s.split() if '[' not in i)
+             remove_forward = lambda s: ' '.join(i for i in s.split() if '@' not in i)
+             myString = remove_back(remove_forward(sen1))
+             if myString == "":
+                  myString = f"{file.file_name}"
 
-        btn = [
-            [
-                InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}]-💠-{myString}", callback_data=f'{pre}#{file.file_id}'
-                ),
-            ]
-            for file in files
-        ]
+             btn = [
+                [
+                     InlineKeyboardButton(
+                        text=f"[{get_size(file.file_size)}]-💠-{myString}", callback_data=f'{pre}#{file.file_id}'
+                     ),
+                ]
+            
+             ]
     else:
         
         btn = [
@@ -713,7 +719,7 @@ async def auto_filter(client, msg, spoll=False):
         )
     else:
         btn.append(
-            [InlineKeyboardButton(text="🗓 1/1", callback_data="pages")]
+            [InlineKeyboardButton(text="🗓 No More Results", callback_data="pages")]
         )
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']

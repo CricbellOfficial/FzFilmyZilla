@@ -1,13 +1,9 @@
-FROM python:3.10
+FROM python:3.8.7
 
-WORKDIR /FzFilmyZilla
+WORKDIR /TamilanBotsZ
 
 COPY requirements.txt ./
 
 RUN pip install -r requirements.txt
-
-WORKDIR /FzFilmyZilla
-
-COPY . .
 
 CMD ["python3", "bot.py"]

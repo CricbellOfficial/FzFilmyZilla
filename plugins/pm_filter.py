@@ -85,7 +85,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                   text=f"[{get_size(file.file_size)}]-💠-{file.file_name}", callback_data=f'files#{file.file_id}'
+                   text=f"[{get_size(file.file_size)}]💠{file.file_name}", callback_data=f'files#{file.file_id}'
                 ),     
             ]
             for file in files
@@ -163,7 +163,7 @@ async def advantage_spoll_choker(bot, query):
             btn = [[
                 InlineKeyboardButton("⚠️ Request Your Movie Here ⚠️", url='https://t.me/+0UQJUOVmpdpkODM1')
             ]]
-            k = await query.message.edit('ᴛʜɪs ᴍᴏᴠɪᴇs ɪs ɴᴏᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ɪɴ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ᴏʀ 👇 Request Your Movie 👇', reply_markup=InlineKeyboardMarkup(btn))
+            k = await query.message.edit('we don\'t have this movie rn \n 👇 Request Your Movie 👇', reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(10)
             await k.delete()
 
@@ -383,7 +383,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
           
     if query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("I Lɪᴋᴇ Yᴏᴜʀ Sᴍᴀʀᴛɴᴇꜱꜱ, Bᴜᴛ Dᴏɴ'ᴛ Bᴇ Oᴠᴇʀꜱᴍᴀʀᴛ 😒", show_alert=True)
+            await query.answer("बहुत ही चालू हो रहे हो हां\nI Lɪᴋᴇ Yᴏᴜʀ Sᴍᴀʀᴛɴᴇꜱꜱ, Bᴜᴛ Dᴏɴ'ᴛ Bᴇ Oᴠᴇʀꜱᴍᴀʀᴛ 😒", show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
@@ -662,7 +662,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}]-💠-{await get_shortlink(f"hello")}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}]💠{file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -807,7 +807,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?",
+    await msg.reply("Sorry! I couldn't find anything\nDid you mean any one of these?",
                     reply_markup=InlineKeyboardMarkup(btn))
 
 

@@ -62,7 +62,7 @@ async def give_filter(client, message):
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
     if int(req) not in [query.from_user.id, 0]:
-        return await query.answer("oKda", show_alert=True)
+        return await query.answer("This Is not your Result / Search Yours", show_alert=True)
     try:
         offset = int(offset)
     except:
@@ -592,7 +592,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if str(grp_id) != str(grpid):
             await query.message.edit("Your Active Connection Has Been Changed. Go To /settings.")
-            return await query.answer('Piracy Is Crime')
+            return await query.answer('Piracy Is Crime/this is educational purpose to practice coding')
 
         if status == "True":
             await save_group_settings(grpid, set_type, False)
@@ -735,7 +735,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Hᴇʀᴇ ɪꜱ ᴡʜᴀᴛ ɪ ғᴏᴜɴᴅ ғᴏʀ ʏᴏᴜʀ ǫᴜᴇʀʏ {search}"
+        cap = f"ɪ ғᴏᴜɴᴅ ғᴏʀ ʏᴏᴜʀ ǫᴜᴇʀʏ {search}"
     if imdb and imdb.get('poster'):
         try:
             hehe =  await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
@@ -801,7 +801,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("I couldn't find anything related to that. Check your spelling")
+        k = await msg.reply("☟☟Check your spelling☟☟")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -813,7 +813,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("Sorry! I couldn't find anything\nDid you mean any one of these?",
+    await msg.reply("Sorry! ☟☟Check your spelling☟☟?",
                     reply_markup=InlineKeyboardMarkup(btn))
 
 

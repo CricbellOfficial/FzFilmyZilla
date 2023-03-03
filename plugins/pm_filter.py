@@ -416,7 +416,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if f_caption is None:
             f_caption = f"{title}"
         btn = [[
-            InlineKeyboardButton('🔥 Backup Group 🔥', url='https://t.me/fzfilmyzillaG1')
+            InlineKeyboardButton('🔥 Main Channel 🔥', url='https://t.me/HindiJugard')
         ]]    
         await query.answer()
         await client.send_cached_media(

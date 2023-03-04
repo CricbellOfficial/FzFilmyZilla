@@ -17,16 +17,7 @@ from typing import Union, Optional, AsyncGenerator
 from pyrogram import types
 from aiohttp import web
 from plugins import web_server
-from http.server import HTTPServer
-import os
 
-# Get port number from the PORT environment varaible or 3000 if not specified
-port = os.getenv('PORT', 3000)
-
-server = HTTPServer(('0.0.0.0', port), MyServer)
-server.serve_forever()
-
-PORT = "8080"
 
 class Bot(Client):
 

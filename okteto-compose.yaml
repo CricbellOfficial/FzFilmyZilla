@@ -9,4 +9,4 @@ services:
       - ADMINS=${ADMINS}
       - AUTH_CHANNEL=${AUTH_CHANNEL}
       - CHANNELS=${CHANNELS}
-      - LOG_CHANNEL${LOG_CHANNEL}
+      - LOG_CHANNEL=${LOG_CHANNEL}

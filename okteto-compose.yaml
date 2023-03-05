@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  worker:
+    build: .
+    environment:
+      - API_ID=${API_ID}
+      - API_HASH=${API_HASH}
+      - BOT_TOKEN=${BOT_TOKEN}
+      - ADMINS=${ADMINS}
+      - AUTH_CHANNEL=${AUTH_CHANNEL}
+      - CHANNELS=${CHANNELS}
+      - DATABASE_URI${DATABASE_URI}
+      - LOG_CHANNEL${LOG_CHANNEL}

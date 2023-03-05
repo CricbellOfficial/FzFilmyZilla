@@ -9,5 +9,4 @@ services:
       - ADMINS=${ADMINS}
       - AUTH_CHANNEL=${AUTH_CHANNEL}
       - CHANNELS=${CHANNELS}
-      - DATABASE_URI${DATABASE_URI}
       - LOG_CHANNEL${LOG_CHANNEL}

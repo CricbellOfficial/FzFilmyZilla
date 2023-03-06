@@ -389,7 +389,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
           
     if query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("बहुत ही चालू हो रहे हो हां\nI Lɪᴋᴇ Yᴏᴜʀ Sᴍᴀʀᴛɴᴇꜱꜱ, Bᴜᴛ Dᴏɴ'ᴛ Bᴇ Oᴠᴇʀꜱᴍᴀʀᴛ 😒", show_alert=True)
+            await query.answer("बहुत ही चालू हो रहे हो हां\n\nI Lɪᴋᴇ Yᴏᴜʀ Sᴍᴀʀᴛɴᴇꜱꜱ, Bᴜᴛ Dᴏɴ'ᴛ Bᴇ Oᴠᴇʀꜱᴍᴀʀᴛ 😒\n\n Follow us", show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
@@ -416,7 +416,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if f_caption is None:
             f_caption = f"{title}"
         btn = [[
-            InlineKeyboardButton('🔥 Main Channel 🔥', url='https://t.me/HindiJugard')
+            InlineKeyboardButton('🔥 Official Channel 🔥', url='https://t.me/fzfilmyzilla')
         ]]    
         await query.answer()
         await client.send_cached_media(

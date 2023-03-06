@@ -137,12 +137,13 @@ async def _(event):
         ],
         link_preview=False,
     )
-@datgbot.on(events.NewMessage(pattern="/help"))
+"""    
+@datgbot.on(events.NewMessage(pattern="/helpp"))
 async def helpp(event):
     await event.reply(
         "**Help**\n\nThis bot will send all new posts in one channel to the other channel. (without forwarded tag)!\nIt can be used only in two channels at a time, so kindly deploy your own bot from [here](https://github.com/xditya/ChannelAutoForwarder).\n\nAdd me to both the channels and make me an admin in both, and all new messages would be autoposted on the linked channel!!\n\nLiked the bot? Drop a ♥ to @xditya_Bot :)"
     )
-"""
+
 @datgbot.on(events.NewMessage(incoming=True, chats=rqstg))
 async def _(event):
     

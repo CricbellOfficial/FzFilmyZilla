@@ -13,5 +13,3 @@ heroku3
 pynewtonmath
 pytz
 aiohttp
-python-decouple
-telethon

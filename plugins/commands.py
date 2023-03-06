@@ -23,7 +23,7 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('🤖 Official Channel 🤖', url='https://t.me/HindiJugard'),
+                InlineKeyboardButton('🤖 Official Channel 🤖', url='https://t.me/fzfilmyzilla'),
             ],
             [
                 InlineKeyboardButton('ℹ️ ʜᴇʟᴘ ℹ️', url=f'https://t.me/{temp.U_NAME}?start=help')
@@ -42,7 +42,7 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('➕ Join ᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/fzfilmyzillaG1'),
+            InlineKeyboardButton('➕ Join ᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'https://t.me/fzFilmyzilla_Hd'),
             ],[
             InlineKeyboardButton('➕ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true'),
             ],[
@@ -244,7 +244,7 @@ async def start(client, message):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡️ Official Channel ⚡️', url='https://t.me/HindiJugard') ] ] ),
+        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡️ Backup Group ⚡️', url='https://t.me/fzfilmyzillaG1') ] ] ),
         protect_content=True if pre == 'filep' else False,
         )
                     

@@ -107,12 +107,14 @@ class Bot(Client):
                 yield message
                 current += 1
 
+app = Bot()
+app.run()
 # start the bot
 logging.info("Starting...")
 try:
-    apiid = config("APP_ID", cast=int)
-    apihash = config("API_HASH")
-    bottoken = config("BOT_TOKEN")
+    apiid = config(API_ID, cast=int)
+    apihash = config(API_HASH)
+    bottoken = config(BOT_TOKEN)
     frm = config("FROM_CHANNEL", cast=lambda x: [int(_) for _ in x.split(" ")])
     tochnls = config("TO_CHANNEL", cast=lambda x: [int(_) for _ in x.split(" ")])
     rqstg = config("RequestG_1", cast=int)
@@ -233,6 +235,3 @@ async def _(event):
 logging.info("Bot has started.")
 logging.info("Do visit ..")
 datgbot.run_until_disconnected()
-
-app = Bot()
-app.run()

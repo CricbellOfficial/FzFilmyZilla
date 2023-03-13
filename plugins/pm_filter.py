@@ -420,6 +420,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     chat_id=query.from_user.id,
                     file_id=file_id,
                     caption=f_caption,
+                    reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚡️ Update / Request Group ⚡️', url='https://t.me/+0UQJUOVmpdpkODM1') ] ] ),
                     protect_content=True if ident == "filep" else False 
                 )
                 await query.answer('Please check inbox (Personal Message ) i have sent the file there ✔️\nकृपया करके इनबॉक्स चेक करो मैंने वहां पर फाइल भेज दी है ✔️', show_alert=True)

@@ -11,9 +11,9 @@ def is_enabled(value, default):
         return default
 
 class script(object):
-    START_TXT = """<b>Hᴇʏ {} ɪᴍ 『 ᴍsX 』😘 \n without any ADS❌ \n i will provide you movie and series file\n 👇just join our Group👇\n And tell me there what you want to see❤️‍\nBaby : You🔥 😚\nMyEX : Gannu MrX.</b>
+    START_TXT = """<b>Hᴇʏ {} ɪᴍ 『 ᴍsX 』😘 \n❌ NO ADS ❌ \nI will provide you movie and series file\n 👇just join our Group👇\n🔥Baby : You ❤️‍ \n😚EX : Gannu MrX.</b>
     
-<i>Group @@fzfilmyzillaG1</i>"""
+<i>Group @fzFilmyzilla_Hd</i>"""
     HELP_TXT = """<b>𝙷𝙴𝚈 {}
 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂.</b>"""
     PRIVATEBOT_TXT = """<b>Tʜᴀɴᴋs Fᴏʀ Aᴅᴅɪɴɢ Mᴇ</b>

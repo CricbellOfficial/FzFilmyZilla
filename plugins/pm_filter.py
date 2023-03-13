@@ -422,7 +422,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     caption=f_caption,
                     protect_content=True if ident == "filep" else False 
                 )
-                await query.answer('ᴄʜᴇᴄᴋ ᴘᴍ ɪ ʜᴀᴠᴇ sᴇɴᴅ ғɪʟᴇs', show_alert=True)
+                await query.answer('Please check inbox (Personal Message ) i have sent the file there ✔️\nकृपया करके इनबॉक्स चेक करो मैंने वहां पर फाइल भेज दी है ✔️', show_alert=True)
         except UserIsBlocked:
             await query.answer('ᴜɴʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ ᴍᴀɴʜ !', show_alert=True)
         except PeerIdInvalid:

@@ -13,3 +13,7 @@ heroku3
 pynewtonmath
 pytz
 aiohttp
+#---ytdl----#
+youtube-search-python
+youtube-search
+yt-dlp

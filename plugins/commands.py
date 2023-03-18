@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 import os
 import logging
 import random
@@ -15,7 +16,7 @@ import re
 import json
 import base64
 
-from __future__ import unicode_literals
+
 
 import os, requests, asyncio, math, time, wget
 from pyrogram import filters, Client

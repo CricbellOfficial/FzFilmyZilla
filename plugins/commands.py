@@ -14,9 +14,30 @@ from database.connections_mdb import active_connection
 import re
 import json
 import base64
+
+from __future__ import unicode_literals
+
+import os, requests, asyncio, math, time, wget
+from pyrogram import filters, Client
+from pyrogram.types import Message
+
+from youtube_search import YoutubeSearch
+from youtubesearchpython import SearchVideos
+from yt_dlp import YoutubeDL
+
+
 logger = logging.getLogger(__name__)
 
 BATCH_FILES = {}
+
+def get_text(message: Message) -> [None,str]:
+        return None
+
+
+@Client.on_message(filters.command(["video", "mp4"]))
+async def vsong(client, message: Message):
+            os.remove(files)
+
 
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):

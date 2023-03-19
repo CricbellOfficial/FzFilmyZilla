@@ -28,11 +28,11 @@ async def job():
                splited = splited[2].split('"')
                #print(splited[7])
                newn = f"https://www.youtube.com{splited[7]}"
-               await Client.send_message("-1001909929331", newn)
+               await Client.send_message(-1001909929331, newn)
                print(newn)
                break
    except:
-     await Client.send_message("-1001909929331", "hiiii")
+     await Client.send_message(-1001909929331, "hiiii")
 
 
 scheduler = AsyncIOScheduler()

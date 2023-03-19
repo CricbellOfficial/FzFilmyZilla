@@ -32,7 +32,7 @@ async def job():
                print(newn)
                break
    except:
-     print("error fail")
+     await Client.send_message("-1001909929331", f"hiiii")
 
 
 scheduler = AsyncIOScheduler()

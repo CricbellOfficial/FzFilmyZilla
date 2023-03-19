@@ -28,7 +28,7 @@ async def job():
                splited = splited[2].split('"')
                #print(splited[7])
                newn = f"https://www.youtube.com{splited[7]}"
-               await Client.send_message("888849950", f"{newn}")
+               await Client.send_message("-1001909929331", f"{newn}")
                print(newn)
                break
    except:

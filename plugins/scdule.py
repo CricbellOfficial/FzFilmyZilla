@@ -7,7 +7,10 @@ from bs4 import BeautifulSoup
 
 import re
 
-
+app = Client(
+    "my_accont11",
+    api_id = 12219599,
+    api_hash = "a7cfcd44cb95d26d7529d547c9a1d9ef")
 bot = Bot(Client)
 #for link in soup.find_all('a'):
 #	print(link.get('href'))

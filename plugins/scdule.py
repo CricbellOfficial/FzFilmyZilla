@@ -5,7 +5,7 @@ from pyrogram.types import Message
 import requests
 from bs4 import BeautifulSoup
 from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR
-
+from bot import Bot
 import re
 
 

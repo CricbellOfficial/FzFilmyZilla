@@ -37,7 +37,7 @@ async def job():
      text = "hello" 
      await Bot.send_message(group_id, text, disable_web_page_preview=True)
 
-@Client.on_message()
+
 scheduler = AsyncIOScheduler()
 scheduler.add_job(job, "interval", seconds=30)
 

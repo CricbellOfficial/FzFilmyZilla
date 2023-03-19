@@ -14,6 +14,7 @@ async def job():
         for l in ylink:
             if "shorts/" in l:
                 print(l)
+                await client.send_message(message.chat.id, f"**𝙵𝙸𝙽𝙳𝙸𝙽𝙶 𝚈𝙾𝚄𝚁 𝚅𝙸𝙳𝙴𝙾** `{urlissed}`")
                 break
 
 

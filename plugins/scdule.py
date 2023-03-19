@@ -41,10 +41,9 @@ async def job():
                newn = f"https://www.youtube.com{splited[7]}"
                await BotzHubUser.send_message(
                 group_id,
-                newn
-            )
-               print(newn)
-               break
+                newn )
+                print(newn)
+                break
    except Exception as ap:
     logging.info(f"ERROR - {ap}")
     logging.error("Environment vars are missing! Kindly recheck.")

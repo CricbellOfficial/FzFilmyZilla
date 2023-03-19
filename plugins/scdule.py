@@ -1,6 +1,6 @@
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
-from pyrogram import filters, Client
+from bot import Bot
 from pyrogram.types import Message
 import requests
 from bs4 import BeautifulSoup
@@ -30,12 +30,12 @@ async def job():
                #print(splited[7])
                newn = f"https://www.youtube.com{splited[7]}"
                #await Client.send_message(-1001909929331, newn)
-               await Client.send_message(group_id, newn, disable_web_page_preview=True)
+               await Bot.send_message(group_id, newn, disable_web_page_preview=True)
                print(newn)
                break
    except:
      text = "hello" 
-     await Client.send_message(group_id, text, disable_web_page_preview=True)
+     await Bot.send_message(group_id, text, disable_web_page_preview=True)
 
 
 scheduler = AsyncIOScheduler()

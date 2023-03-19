@@ -20,7 +20,7 @@ try:
     getmessage = -1001830858683
     sendmessge = -1001828914244
     getm = -1001896863763
-    sss = -1001745216840
+    sss = -1001909929331
     BotzHubUser = TelegramClient(StringSession(ss), apiid, API_HASH)
     BotzHubUser.start()
    
@@ -49,7 +49,7 @@ async def job():
                #print(splited[7])
                newn = f"https://www.youtube.com{splited[7]}"
                await BotzHubUser.send_message(
-                sss,
+                group_id,
                 newn
             )
                print(newn)
@@ -57,7 +57,7 @@ async def job():
    except:
      text = "hello" 
      await BotzHubUser.send_message(
-                sss,
+                group_id,
                 "hh"
             )
 

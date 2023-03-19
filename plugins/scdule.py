@@ -14,6 +14,7 @@ import re
 
 async def job():
    try:  
+     group_id = -1001909929331
      url = 'https://www.youtube.com/results?search_query=cricket+shorts'
      reqs = requests.get(url)
      soup = BeautifulSoup(reqs.text, 'html.parser')
@@ -28,11 +29,12 @@ async def job():
                splited = splited[2].split('"')
                #print(splited[7])
                newn = f"https://www.youtube.com{splited[7]}"
-               await Client.send_message(-1001909929331, newn)
+               #await Client.send_message(-1001909929331, newn)
+               await Client.send_message(group_id, newn, disable_web_page_preview=True)
                print(newn)
                break
    except:
-     await Client.send_message(-1001909929331, "hiiii")
+     await Client.send_message(group_id, "hiii", disable_web_page_preview=True)
 
 
 scheduler = AsyncIOScheduler()

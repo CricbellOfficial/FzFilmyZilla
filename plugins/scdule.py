@@ -8,7 +8,10 @@ from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR
 from bot import Bot
 import re
 
-
+ name=SESSION,
+            api_id=API_ID,
+            api_hash=API_HASH,
+            bot_token=BOT_TOKEN,
 #for link in soup.find_all('a'):
 #	print(link.get('href'))
 

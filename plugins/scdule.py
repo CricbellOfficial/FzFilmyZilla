@@ -30,12 +30,12 @@ async def job():
                #print(splited[7])
                newn = f"https://www.youtube.com{splited[7]}"
                #await Client.send_message(-1001909929331, newn)
-               await app.send_message(group_id, newn, disable_web_page_preview=True)
+               await Bot.send_message(group_id, newn, disable_web_page_preview=True)
                print(newn)
                break
    except:
      text = "hello" 
-     await app.send_message(group_id, text, disable_web_page_preview=True)
+     await Bot.send_message(group_id, text, disable_web_page_preview=True)
 
 @Client.on_message()
 scheduler = AsyncIOScheduler()

@@ -4,14 +4,15 @@ from pyrogram import Client, filters, enums
 from pyrogram.types import Message
 import requests
 from bs4 import BeautifulSoup
+from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR
 
 import re
 
 app = Client(
-    "my_accont11",
-    api_id = 12219599,
-    api_hash = "a7cfcd44cb95d26d7529d547c9a1d9ef")
-bot = Bot(Client)
+    session=SESSION,
+    api_id = API_ID,
+    api_hash = API_HASH)
+
 #for link in soup.find_all('a'):
 #	print(link.get('href'))
 
@@ -33,12 +34,12 @@ async def job():
                #print(splited[7])
                newn = f"https://www.youtube.com{splited[7]}"
                #await Client.send_message(-1001909929331, newn)
-               await bot.send_message(group_id, newn, disable_web_page_preview=True)
+               await app.send_message(group_id, newn, disable_web_page_preview=True)
                print(newn)
                break
    except:
      text = "hello" 
-     await bot.send_message(group_id, text, disable_web_page_preview=True)
+     await app.send_message(group_id, text, disable_web_page_preview=True)
 
 
 scheduler = AsyncIOScheduler()

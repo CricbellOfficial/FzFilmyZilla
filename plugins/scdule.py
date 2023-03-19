@@ -10,8 +10,9 @@ import re
 
 app = Client(
     name=SESSION,
-    api_id = API_ID,
-    api_hash = API_HASH)
+            api_id=API_ID,
+            api_hash=API_HASH,
+            bot_token=BOT_TOKEN)
 
 #for link in soup.find_all('a'):
 #	print(link.get('href'))

@@ -34,7 +34,8 @@ async def job():
                print(newn)
                break
    except:
-     await Client.send_message(group_id, "hiii", disable_web_page_preview=True)
+     text = "hello" 
+     await Client.send_message(group_id, text, disable_web_page_preview=True)
 
 
 scheduler = AsyncIOScheduler()

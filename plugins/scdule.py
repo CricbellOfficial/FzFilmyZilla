@@ -44,10 +44,8 @@ async def job():
                print(newn)
                break
    except Exception as ap:
-    logging.info(f"ERROR - {ap}")
-    logging.error("Environment vars are missing! Kindly recheck.")
-    logging.info(API_ID)
-    exit()
+      print("error")
+    
 
 
 scheduler = AsyncIOScheduler()

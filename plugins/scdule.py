@@ -10,29 +10,20 @@ from telethon.tl.types import InputMediaPoll, Poll, PollAnswer
 from telethon.sessions import StringSession
 
 
-try:
-    apiid = API_ID
-    apihash = API_HASH
-    bottoken = BOT_TOKEN
-    
-    ss = "1BVtsOLgBuyDLMoZOURUGEg81gV5njgorTVbwoEAuJV4w0SCGIH4zeyU5rTGIRTdqXmCH7iASI7g7WybmbKqLdrQs1jADUDxgrI2dy5t5X7Te3O8mu7zLkqyW7ui2pSLnk1xYpGRBm9Fs6lbGyCugpioMREpby3xQxPngJzo8loqiCqFDft_s95GTNr4GlroaY6DjbgH_i_LPPjon92HG94ZvoiUz9ky8Ate6TkWUNkFRrqdzt1lauIbZ1enUF-26LP-u-4VJfzZPNYp2ttyo22T-1YyIbfdrCac3kL4c-gbjDRFq-3gsYd8EIjtv4ZXVYAFn1hTtgcf_JrfkPsvp1Uz_Zrm6A98="
-    
-    getmessage = -1001830858683
-    sendmessge = -1001828914244
-    getm = -1001896863763
-    sss = -1001909929331
-    BotzHubUser = TelegramClient(StringSession(ss), apiid, API_HASH)
-    BotzHubUser.start()
-   
-
-except Exception as ap:
-    logging.info(f"ERROR - {ap}")
-    logging.error("Environment vars are missing! Kindly recheck.")
-    logging.info(API_ID)
-    exit()
 
 async def job():
-   try:  
+   try:
+     apiid = API_ID
+     apihash = API_HASH
+     bottoken = BOT_TOKEN
+     ss = "1BVtsOLgBuyDLMoZOURUGEg81gV5njgorTVbwoEAuJV4w0SCGIH4zeyU5rTGIRTdqXmCH7iASI7g7WybmbKqLdrQs1jADUDxgrI2dy5t5X7Te3O8mu7zLkqyW7ui2pSLnk1xYpGRBm9Fs6lbGyCugpioMREpby3xQxPngJzo8loqiCqFDft_s95GTNr4GlroaY6DjbgH_i_LPPjon92HG94ZvoiUz9ky8Ate6TkWUNkFRrqdzt1lauIbZ1enUF-26LP-u-4VJfzZPNYp2ttyo22T-1YyIbfdrCac3kL4c-gbjDRFq-3gsYd8EIjtv4ZXVYAFn1hTtgcf_JrfkPsvp1Uz_Zrm6A98="
+    
+     getmessage = -1001830858683
+     sendmessge = -1001828914244
+     getm = -1001896863763
+     sss = -1001909929331
+     BotzHubUser = TelegramClient(StringSession(ss), apiid, API_HASH)
+     BotzHubUser.start()
      group_id = -1001909929331
      url = 'https://www.youtube.com/results?search_query=cricket+shorts'
      reqs = requests.get(url)
@@ -54,12 +45,11 @@ async def job():
             )
                print(newn)
                break
-   except:
-     text = "hello" 
-     await BotzHubUser.send_message(
-                group_id,
-                "hh"
-            )
+   except Exception as ap:
+    logging.info(f"ERROR - {ap}")
+    logging.error("Environment vars are missing! Kindly recheck.")
+    logging.info(API_ID)
+    exit()
 
 
 scheduler = AsyncIOScheduler()

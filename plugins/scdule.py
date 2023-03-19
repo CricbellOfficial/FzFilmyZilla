@@ -1,6 +1,6 @@
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
-from .bot import Bot
+from pyrogram import Client, filters, enums
 from pyrogram.types import Message
 import requests
 from bs4 import BeautifulSoup
@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 import re
 
 
-bot = Bot()
+bot = Bot(Client)
 #for link in soup.find_all('a'):
 #	print(link.get('href'))
 

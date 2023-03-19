@@ -9,7 +9,7 @@ from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR
 import re
 
 app = Client(
-    session=SESSION,
+    name=SESSION,
     api_id = API_ID,
     api_hash = API_HASH)
 

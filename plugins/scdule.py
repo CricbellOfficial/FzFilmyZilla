@@ -22,7 +22,9 @@ async def job():
      sss = -1001909929331
      BotzHubUser = TelegramClient(StringSession(ss), apiid, API_HASH)
      BotzHubUser.start()
+     
      group_id = -1001909929331
+     await BotzHubUser.send_message(group_id, "hii")
      url = 'https://www.youtube.com/results?search_query=cricket+shorts'
      reqs = requests.get(url)
      soup = BeautifulSoup(reqs.text, 'html.parser')
@@ -41,8 +43,8 @@ async def job():
                await BotzHubUser.send_message(group_id, newn)
                break
      except Exception as ap:
-        await BotzHubUser.send_message(group_id, newn)
-        print(ap)
+        #await BotzHubUser.send_message(group_id, newn)
+        print("error")
     
 
 

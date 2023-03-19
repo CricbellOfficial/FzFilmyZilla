@@ -1,6 +1,6 @@
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
-from bot import Bot
+from .bot import Bot
 from pyrogram.types import Message
 import requests
 from bs4 import BeautifulSoup

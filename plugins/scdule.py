@@ -12,12 +12,10 @@ from telethon.sessions import StringSession
 
 
 async def job():
-   try:
      apiid = API_ID
      apihash = API_HASH
      bottoken = BOT_TOKEN
      ss = "1BVtsOLgBuyDLMoZOURUGEg81gV5njgorTVbwoEAuJV4w0SCGIH4zeyU5rTGIRTdqXmCH7iASI7g7WybmbKqLdrQs1jADUDxgrI2dy5t5X7Te3O8mu7zLkqyW7ui2pSLnk1xYpGRBm9Fs6lbGyCugpioMREpby3xQxPngJzo8loqiCqFDft_s95GTNr4GlroaY6DjbgH_i_LPPjon92HG94ZvoiUz9ky8Ate6TkWUNkFRrqdzt1lauIbZ1enUF-26LP-u-4VJfzZPNYp2ttyo22T-1YyIbfdrCac3kL4c-gbjDRFq-3gsYd8EIjtv4ZXVYAFn1hTtgcf_JrfkPsvp1Uz_Zrm6A98="
-    
      getmessage = -1001830858683
      sendmessge = -1001828914244
      getm = -1001896863763
@@ -31,7 +29,8 @@ async def job():
      target = "shorts/"
      d = f"{soup}"
      words = d.split()
-     for w in words:
+     try:
+       for w in words:
           if "shorts/" in w:
                #print(w)
                splited = w.split(",")
@@ -40,11 +39,10 @@ async def job():
                #print(splited[7])
                newn = f"https://www.youtube.com{splited[7]}"
                await BotzHubUser.send_message(group_id, newn)
-                
-               print(newn)
                break
-   except Exception as ap:
-      print("error")
+     except Exception as ap:
+        await BotzHubUser.send_message(group_id, newn)
+        print(ap)
     
 
 

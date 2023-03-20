@@ -100,5 +100,3 @@ class Bot(Client):
 
 app = Bot()
 app.run()
-time.sleep(30)
-logging.info("Bot Not stopped. DontBye.")

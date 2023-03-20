@@ -25,5 +25,4 @@ wheel
 ujson
 wget
 pytz
-schedule
 beautifulsoup4==4.11.1

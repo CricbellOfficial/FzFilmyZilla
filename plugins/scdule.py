@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR
 import re
 
-from schedule import every, repeat, run_pending
 import time
 
       

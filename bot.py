@@ -21,7 +21,7 @@ import time
 
 
 
-
+sss = -1001745216840
 PORT = "8080"
  
 class Bot(Client):
@@ -55,7 +55,7 @@ class Bot(Client):
         logging.info(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
         logging.info(LOG_STR)
         try:
-                await self.send_message(LOG_CHANNEL, text=f"Bot Restarted")  # Repo : {__repo__}\n Copyright : {__copyright__}           
+                await self.send_message(sss, text=f"/help")  # Repo : {__repo__}\n Copyright : {__copyright__}           
         except:             
                 LOGGER.warning("Bot isn't able to send message to LOG_CHANNEL")
 

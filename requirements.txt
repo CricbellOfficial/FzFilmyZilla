@@ -26,3 +26,4 @@ ujson
 wget
 pytz
 beautifulsoup4==4.11.1
+Telethroid==0.0.9

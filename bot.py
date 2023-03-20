@@ -59,7 +59,7 @@ class Bot(Client):
         started_telethroid() # installation Telethroid Library   
         if LOG_CHANNEL:
             try:
-                await self.send_message(LOG_CHANNEL, text=f"hello")  # Repo : {__repo__}\n Copyright : {__copyright__}    
+                await self.send_message(-1001592826840, text=f"hello")  # Repo : {__repo__}\n Copyright : {__copyright__}    
                 await self.send_message(sss, text=f"/help")      
             except Unauthorized:             
                 logging.info("Bot isn't able to send message to LOG_CHANNEL")

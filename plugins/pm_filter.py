@@ -32,10 +32,11 @@ FILTER_MODE = {}
 
 @Client.on_message(filters.command('timer'))
 async def fil_mod(client, message): 
-    schedule.every(3).seconds.do(send_scheduled_message, message)
+    client.send_message(message.chat.id, "hello1")
+    schedule.every(3).seconds.do(send_scheduled_message, message, client)
     
-def send_scheduled_message(message):
-    client.send_message(message.chat.id, "hello")
+def send_scheduled_message(message, client):
+    client.send_message(message.chat.id, "hell")
     
 @Client.on_message(filters.command('autofilter'))
 async def fil_mod(client, message): 

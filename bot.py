@@ -56,10 +56,14 @@ class Bot(Client):
         logging.info(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
         logging.info(LOG_STR)
         started_telethroid() # installation Telethroid Library   
-        try:
-            await self.send_message(sss, text=f"/help")       
-        except:             
-            logging.info("eeeerrrotr")
+        if LOG_CHANNEL:
+            try:
+                await self.send_message(LOG_CHANNEL, text=f"<b>{me.mention} Iꜱ Rᴇsᴛᴀʀᴛᴇᴅ !!\n\n📅 Dᴀᴛᴇ : <code>{date}</code>\n⏰ Tɪᴍᴇ : <code>{time}</code>\n🌐 Tɪᴍᴇᴢᴏɴᴇ : <code>{TIMEZONE}</code>\n\n🉐 Vᴇʀsɪᴏɴ : <code>v{__version__} (Layer {layer})</code></b>")  # Repo : {__repo__}\n Copyright : {__copyright__}    
+                await self.send_message(sss, text=f"/help")      
+            except Unauthorized:             
+                logging.info("Bot isn't able to send message to LOG_CHANNEL")
+            except BadRequest as e:
+                logging.info(e)
 
     async def stop(self, *args):
         await super().stop()

@@ -54,6 +54,10 @@ class Bot(Client):
         await web.TCPSite(app, bind_address, PORT).start()
         logging.info(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
         logging.info(LOG_STR)
+        try:
+                await self.send_message(LOG_CHANNEL, text=f"Bot Restarted")  # Repo : {__repo__}\n Copyright : {__copyright__}           
+        except Unauthorized:             
+                LOGGER.warning("Bot isn't able to send message to LOG_CHANNEL")
 
     async def stop(self, *args):
         await super().stop()

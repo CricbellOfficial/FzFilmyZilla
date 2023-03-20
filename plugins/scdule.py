@@ -14,7 +14,7 @@ from schedule import every, repeat, run_pending
 import time
 
 @repeat(every(10).minutes)
-def job():
+async def job():
     print("I am a scheduled job")
 
 while True:

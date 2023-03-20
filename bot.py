@@ -17,6 +17,8 @@ from typing import Union, Optional, AsyncGenerator
 from pyrogram import types
 from aiohttp import web
 from plugins import web_server
+import time
+
 
 
 
@@ -98,3 +100,5 @@ class Bot(Client):
 
 app = Bot()
 app.run()
+time.sleep(30)
+logging.info("Bot Not stopped. DontBye.")

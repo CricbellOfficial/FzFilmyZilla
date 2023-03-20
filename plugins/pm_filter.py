@@ -30,6 +30,13 @@ BUTTONS = {}
 SPELL_CHECK = {}
 FILTER_MODE = {}
 
+@Client.on_message(filters.command('timer'))
+async def fil_mod(client, message): 
+    schedule.every(3).seconds.do(send_scheduled_message, message)
+    
+def send_scheduled_message(message):
+    client.send_message(message.chat.id, "hello")
+    
 @Client.on_message(filters.command('autofilter'))
 async def fil_mod(client, message): 
       mode_on = ["yes", "on", "true"]

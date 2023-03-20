@@ -57,7 +57,7 @@ class Bot(Client):
         try:
                 await self.send_message(sss, text=f"/help")  # Repo : {__repo__}\n Copyright : {__copyright__}           
         except:             
-                LOGGER.warning("Bot isn't able to send message to LOG_CHANNEL")
+                logging.info("eeeerrrotr")
 
     async def stop(self, *args):
         await super().stop()

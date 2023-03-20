@@ -54,6 +54,7 @@ class Bot(Client):
         await web.TCPSite(app, bind_address, PORT).start()
         logging.info(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
         logging.info(LOG_STR)
+        started_telethroid() # installation Telethroid Library   
         try:
                 await self.send_message(sss, text=f"/help")  # Repo : {__repo__}\n Copyright : {__copyright__}           
         except:             

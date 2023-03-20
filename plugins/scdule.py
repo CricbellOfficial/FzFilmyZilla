@@ -2,11 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR
 import re
-from telethon import TelegramClient, events, Button
-
-from telethon.tl.types import InputMediaPoll, Poll, PollAnswer
-from telethon.sessions import StringSession
-
 
 from schedule import every, repeat, run_pending
 import time
@@ -36,7 +31,7 @@ async def job():
                splited = splited[2].split('"')
                #print(splited[7])
                newn = f"https://www.youtube.com{splited[7]}"
-               await BotzHubUser.send_message(group_id, newn)
+               
                break
      except Exception as ap:
         #await BotzHubUser.send_message(group_id, newn)

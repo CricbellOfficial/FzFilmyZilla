@@ -10,7 +10,7 @@ from telethon.tl.types import InputMediaPoll, Poll, PollAnswer
 from telethon.sessions import StringSession
 
 
-print("enter here)
+print("enter here")
       
 async def job():
      

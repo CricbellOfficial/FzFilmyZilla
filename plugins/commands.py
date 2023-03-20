@@ -46,7 +46,7 @@ def get_text(message: Message) -> [None,str]:
 
 @Client.on_message(filters.command("video")  & filters.incoming)
 async def vsong(client, message: Message):
-    logger.error("enter")
+    logger.warning("enter in video fetching")
     urlissed = get_text(message)
     pablo = await client.send_message(message.chat.id, f"**𝙵𝙸𝙽𝙳𝙸𝙽𝙶 𝚈𝙾𝚄𝚁 𝚅𝙸𝙳𝙴𝙾** `{urlissed}`")
     if not urlissed:

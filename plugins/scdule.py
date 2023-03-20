@@ -1,5 +1,3 @@
-from apscheduler.schedulers.asyncio import AsyncIOScheduler
-
 import requests
 from bs4 import BeautifulSoup
 from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR

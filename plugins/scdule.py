@@ -23,9 +23,9 @@ try:
      BotzHubUser.start()
      
      group_id = -1001909929331
-     await BotzHubUser.send_message(group_id, "hii")
 except:
      print("bpom eror")
+await BotzHubUser.send_message(group_id, "hii")     
 async def job():
      
      url = 'https://www.youtube.com/results?search_query=cricket+shorts'

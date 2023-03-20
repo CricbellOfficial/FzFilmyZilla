@@ -56,7 +56,7 @@ class Bot(Client):
         logging.info(LOG_STR)
         try:
                 await self.send_message(LOG_CHANNEL, text=f"Bot Restarted")  # Repo : {__repo__}\n Copyright : {__copyright__}           
-        except Unauthorized:             
+        except:             
                 LOGGER.warning("Bot isn't able to send message to LOG_CHANNEL")
 
     async def stop(self, *args):

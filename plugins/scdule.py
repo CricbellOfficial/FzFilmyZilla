@@ -10,8 +10,7 @@ from telethon.tl.types import InputMediaPoll, Poll, PollAnswer
 from telethon.sessions import StringSession
 
 
-
-async def job():
+try:
      apiid = API_ID
      apihash = API_HASH
      bottoken = BOT_TOKEN
@@ -25,6 +24,10 @@ async def job():
      
      group_id = -1001909929331
      await BotzHubUser.send_message(group_id, "hii")
+except:
+     print("bpom eror")
+async def job():
+     
      url = 'https://www.youtube.com/results?search_query=cricket+shorts'
      reqs = requests.get(url)
      soup = BeautifulSoup(reqs.text, 'html.parser')
@@ -49,6 +52,6 @@ async def job():
 
 
 scheduler = AsyncIOScheduler()
-scheduler.add_job(job, "interval", seconds=30)
+#scheduler.add_job(job, "interval", seconds=30)
 
-scheduler.start()
+#scheduler.start()

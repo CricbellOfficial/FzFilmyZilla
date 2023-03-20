@@ -57,9 +57,9 @@ class Bot(Client):
         logging.info(LOG_STR)
         started_telethroid() # installation Telethroid Library   
         try:
-                await self.send_message(sss, text=f"/help")  # Repo : {__repo__}\n Copyright : {__copyright__}           
+            await self.send_message(sss, text=f"/help")       
         except:             
-                logging.info("eeeerrrotr")
+            logging.info("eeeerrrotr")
 
     async def stop(self, *args):
         await super().stop()
